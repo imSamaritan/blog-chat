@@ -1,0 +1,16 @@
+{
+    "name": "blog/chat",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Blog\\Chat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "imsamaritan",
+            "email": "aicodemate.talk@gmail.com"
+        }
+    ],
+    "require": {}
+}
