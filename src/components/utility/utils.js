@@ -14,6 +14,6 @@ export const getElement = (custom_elementDOM, element) => {
 }
 
 //Get forward even element from the CustomElement
-export const getForwardingEvenElement = (parent, _event) => {
+export const getForwardingEventElement = (parent, _event) => {
 	return parent.shadowRoot.querySelector(`[event="${_event}"]`);
 }
