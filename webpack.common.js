@@ -31,7 +31,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'blogChat - home-page',
+			title: 'blogChat',
 			filename: 'index.html',
 			template: path.resolve(__dirname, 'src/views/index.html')
 		})
