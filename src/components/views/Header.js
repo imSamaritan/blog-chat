@@ -37,14 +37,14 @@ export default class Header extends App {
 					}
 
 					.header-text .title {
-						padding-bottom: 10px;
+						padding-bottom: 10px 0 5px 0;
 						color: teal;
 					}
 
 					::slotted(p) {	
 						font-size: 20px;
 						color: #252525;
-						padding: 7px 0 !important;
+						padding:0 0 7px 0 !important;
 					}
 				</style>
 			
