@@ -4,6 +4,9 @@
 @import './components/_reset';
 @import './components/_variables';
 
+body {
+	font-family: 'Nunito' !important;
+}
 .row {
 	padding: 0 !important;
 	margin: 0 !important;
