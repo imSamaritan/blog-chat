@@ -7,7 +7,18 @@ export default class App extends HTMLElement {
 	}
 	
 	connectedCallback() {
+		//mount component rendering
 		this.shadowRoot.innerHTML = this.render();
+	}
+	
+	setState(new_state) {
+		this.state = new_state;
+		//mounted state changed rendering
+		this.shadowRoot.innerHTML = this.render(this.state);
+	}
+
+	getCustomElement() {
+		return document.querySelector(this.localName);
 	}
 
 	render(state = {}) {
