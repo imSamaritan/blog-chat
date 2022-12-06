@@ -1,9 +1,12 @@
+import Utils from "../utils/Utils";
+
+export const _parentState = new WeakMap();
 
 export default class App extends HTMLElement {
 	constructor() {
 		super();
-		this.state = {};
 		this.attachShadow({mode: 'open'});
+		this.state = {};
 	}
 	
 	connectedCallback() {

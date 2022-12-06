@@ -8,23 +8,18 @@
 </head>
 <body>
 
-	<app-root class="app mt-5">
+	<app-root class="app mt-5" fonts="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+		<div class="my-lg-5 py-lg-3"></div>
 		<div class="container mt-5">
 			<div class="row justify-content-center align-items-center g-5">
-				<div class="col-12 col-lg-5 mt-5 text-center text-lg-start">
-					<app-header 
-					banner="./banner-cropped.jpg" 
-					title="blogChat" 
-					fonts="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+				<div class="col-12 col-md-12 col-lg-6 col-xl-7 mt-5 text-center text-lg-start">
+					<app-header banner="./banner-cropped-2.jpg" title="blogChat">
 						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, laudantium.</p>
 					</app-header>
 				</div>
-				<div class="col-12 col-lg-6 mt-3 mt-lg-5 text-center text-lg-start">
-					<app-card shadow="top-right">
-						<h1>Hello World</h1>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et, animi quos nisi fugiat, molestias deserunt atque repudiandae, tempore eveniet explicabo? Vitae tempore molestiae consectetur odit, beatae perspiciatis est. Amet?
-						</p>
+				<div class="col-12 col-md-9 col-lg-6 mt-5 col-xl-5 mt-md-5">
+					<app-card>
+						<login-form></login-form>
 					</app-card>
 				</div>				
 			</div>

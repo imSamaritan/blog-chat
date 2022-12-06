@@ -1,3 +1,5 @@
+import App from "../app/App";
+
 export default class Utils {
 	
 	static getProps(element) {
@@ -9,4 +11,10 @@ export default class Utils {
 		return props;
 	}
 
+	static get parentState() {
+		const _parent = new App();
+		const state = Utils.getProps(_parent.getCustomElement());
+
+		return state;
+	}
 }

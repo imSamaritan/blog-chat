@@ -21,7 +21,7 @@ export default class Card extends App {
 					box-sizing: border-box;
 					border: none;
 					border-radius: 10px;
-					box-shadow: -1px -1px 1px rgba(0,0,0,.2), 2px 2px 2px rgba(0,0,0,.2);
+					box-shadow: -1px -1px 25px rgba(0,0,0,.2), 2px 2px 50px rgba(0,0,0,.2);
 					margin-bottom: 50px;
 				}
 			</style>

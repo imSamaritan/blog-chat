@@ -14,7 +14,6 @@ export default class Header extends App {
 	render(state) {
 		 return `
 				<style>
-				@import url(${state.fonts});
 					header {
 						width: 100%;
 					}
@@ -26,6 +25,7 @@ export default class Header extends App {
 
 					.header-banner {
 						width: 100%;
+						text-align: left;
 					}
 
 					img {
@@ -33,7 +33,7 @@ export default class Header extends App {
 					}
 
 					.header-text {
-						padding: 10px 0 0 25px;
+						padding-top: 10px;
 					}
 
 					.header-text .title {
