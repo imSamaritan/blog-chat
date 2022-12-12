@@ -1,17 +1,44 @@
 import App from "../app/App";
 import Utils from "../utils/Utils";
+import { Login } from "../controller/Login";
 
 export default class LoginForm extends App {
+	static get observedAttributes() {
+		return ['icon'];
+	}
+
 	constructor() {
 		super();
-		this.state = {...Utils.parentState};
+		this.state = {...Utils.getProps(this),...Utils.parentState};
+		//Init rendering the DOM
+		this.shadowRoot.innerHTML = this.render(this.state);
+		
+		this.icons = {show: 'eye', hide: 'eye-slash'};
+
+		//Common used selects
+		this.toggleIconEl = this.shadowRoot.querySelector('#eye__icon');
 	}
 
 	connectedCallback() {
-		this.shadowRoot.innerHTML = this.render(this.state);
+
+		this.toggleIconEl.addEventListener('click', () => {
+			Login.toggleIconPasswordVisibility(this);
+		});
+	}
+
+
+
+	attributeChangedCallback(attr, old_value, new_value) {
+		const iconSettings = {
+			attr: attr,
+			oldValue: old_value,
+			newValue: new_value
+		};
+		Login.togglePasswordVisibility(iconSettings, this);
 	}
 
 	render(state) {
+
 		return `
 			<style>
 			@import url('${state.fonts}');
@@ -163,7 +190,7 @@ export default class LoginForm extends App {
 					<label for="password">Password</label>
 					<div class="input-field">
 					<input type="password" id="password" class="password" placeholder="********"/>
-					<span class="bi bi-eye"></span>
+					<span class="bi bi-eye" id="eye__icon"></span>
 					</div>	
 				</div>
 

@@ -13,14 +13,13 @@ export default class App extends HTMLElement {
 		//mount component rendering
 		this.shadowRoot.innerHTML = this.render();
 	}
-	
 	setState(new_state) {
 		this.state = new_state;
 		//mounted state changed rendering
 		this.shadowRoot.innerHTML = this.render(this.state);
 	}
 
-	getCustomElement() {
+	get getCustomElement() {
 		return document.querySelector(this.localName);
 	}
 
